@@ -53,6 +53,9 @@ module Players
              blocking_move
         end
 
+        def remaining_moves(board)
+            board.cells.detect {|cell| cell != " "}
+
     end
 
 end
