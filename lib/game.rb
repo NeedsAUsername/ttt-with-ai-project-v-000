@@ -37,7 +37,7 @@ class Game
       self.board.cells[self.won?[0]] if self.won?
   end
 
-  def turn(input)
+  def turn
       move = "invalid"
       while move == "invalid"
           input = self.current_player.move(self.board).to_i
