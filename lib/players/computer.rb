@@ -1,7 +1,7 @@
 module Players
     class Computer < Player
         def move(board)
-            move = rand(1..9)
+            move = rand(1..9).to_s
         end
     end
 
