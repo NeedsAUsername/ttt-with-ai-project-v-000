@@ -19,6 +19,9 @@ class Game
   end
 
   def won?
-      if self.board.
+      WIN_COMBINATIONS.detect |combination|
+      combination.all? {|number| self.board.cells[number] == "X"} ||
+      combination.all? {|number| self.board.cells[number] == "O"}
+  end 
 
 end
