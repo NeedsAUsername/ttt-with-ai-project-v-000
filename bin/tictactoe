@@ -7,7 +7,7 @@ puts "Do you want a 0, 1, or 2 player game?"
 input = gets.strip
 if input == "0"
     Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
-elsif input = "1"
+elsif input == "1"
     puts "Do you want to go first and be X? y/n"
     answer = gets.strip
     if input == "y"
