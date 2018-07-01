@@ -9,7 +9,7 @@ module Players
 
 
         def move(board)
-            @board = board
+            @@board = board
             # move = rand(1..9).to_s
             winning_move? || blocking_move? || rand(1..9).to_s
         end
@@ -17,11 +17,11 @@ module Players
         def winning_move?
             winning_move = nil
             WIN_COMBINATIONS.each do |c|
-               if board.cells[c[0]] == self.opponent && board.cells[c[1]] == self.opponent && board.cells[c[2]] == " "
+               if @board.cells[c[0]] == self.opponent && @board.cells[c[1]] == self.opponent && @board.cells[c[2]] == " "
                    winning_move = c[2]
-               elsif board.cells[c[0]] == self.opponent && board.cells[c[1]] == " " && board.cells[c[2]] == self.opponent
+               elsif @board.cells[c[0]] == self.opponent && @board.cells[c[1]] == " " && @board.cells[c[2]] == self.opponent
                    winning_move = c[1]
-               elsif board.cells[c[0]] == " " && board.cells[c[1]] == self.opponent && board.cells[c[2]] == self.opponent
+               elsif @board.cells[c[0]] == " " && @board.cells[c[1]] == self.opponent && @board.cells[c[2]] == self.opponent
                    winning_move = c[0]
             end
             winning_move
@@ -34,11 +34,11 @@ module Players
         def blocking_move?
             blocking_move = nil
             WIN_COMBINATIONS.each do |c|
-                if board.cells[c[0]] == self.opponent && board.cells[c[1]] == self.opponent && board.cells[c[2]] == " "
+                if @board.cells[c[0]] == self.opponent && @board.cells[c[1]] == self.opponent && @board.cells[c[2]] == " "
                     winning_move = c[2]
-                elsif board.cells[c[0]] == self.opponent && board.cells[c[1]] == " " && board.cells[c[2]] == self.opponent
+                elsif @board.cells[c[0]] == self.opponent && @board.cells[c[1]] == " " && @board.cells[c[2]] == self.opponent
                     winning_move = c[1]
-                elsif board.cells[c[0]] == " " && board.cells[c[1]] == self.opponent && board.cells[c[2]] == self.opponent
+                elsif @board.cells[c[0]] == " " && @board.cells[c[1]] == self.opponent && @board.cells[c[2]] == self.opponent
                     winning_move = c[0]
                 end
              end
