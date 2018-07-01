@@ -9,7 +9,7 @@ module Players
 
 
         def move(board)
-            @@board = board
+            @board = board
             # move = rand(1..9).to_s
             winning_move? || blocking_move? || rand(1..9).to_s
         end
