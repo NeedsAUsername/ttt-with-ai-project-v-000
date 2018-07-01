@@ -8,19 +8,31 @@ module Players
                 [0, 4, 8], [2, 4, 6]
               ]
 
-           # make winning move
+
            WINNING_MOVE = nil
            BLOCKING_MOVE = nil
+           OPPONENT = "O"
 
+           if @token == "O"
+               OPPONENT = "X"
+           end
+           # check for winning moves
            WIN_COMBINATIONS.each do |c|
-               winning_move = nil 
                if board.cells[c[0]] == @token && board.cells[c[1]] == @token && board.cells[c[2]] == " "
-                   winning_move = c[2]
+                   WINNING_MOVE = c[2]
                elsif board.cells[c[0]] == @token && board.cells[c[1]] == " " && board.cells[c[2]] == @token
-                   winning_move = c[1]
+                   WINNING_MOVE = c[1]
                elsif board.cells[c[0]] == " " && board.cells[c[1]] == @token && board.cells[c[2]] == @token
-                   winning_move = c[0]
+                   WINNING_MOVE = c[0]
                end
+           end
+
+
+           WIN_COMBINATIONS.each do 
+
+
+
+
 
 
 
