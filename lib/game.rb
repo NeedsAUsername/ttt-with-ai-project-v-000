@@ -29,4 +29,7 @@ class Game
       self.board.full? && !self.won?
   end
 
+  def over?
+      self.won? || self.draw?
+
 end
