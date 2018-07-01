@@ -12,7 +12,7 @@ module Players
 
 
            WIN_COMBINATIONS.each do |c|
-               if board.cells[c[0]] == @token 
+               if board.cells[c[0]] == @token && board.cells[c[1]] == @token && board.cells[c[2]] == " "
         end
     end
 end
