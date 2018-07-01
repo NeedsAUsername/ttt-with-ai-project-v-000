@@ -1,11 +1,14 @@
 module Players
     class Computer < Player
         def move(board)
-            board.cells.each_with_index do |cell, index|
-                if board.valid_move?(cell)
-                    return index
+            valid = false
+            while valid = false
+                random = rand(0..8)
+                if board.valid_move?(random)
+                    valid = random
                 end
-            end 
+            end
+            random
         end
     end
 
