@@ -41,7 +41,7 @@ class Game
       move = "invalid"
       while move == "invalid"
           input = self.current_player.move(self.board)
-          if self.board.valid_move?()
+          if self.board.valid_move?(input)
 
   end
 
