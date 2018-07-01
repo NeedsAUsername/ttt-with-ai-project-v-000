@@ -18,4 +18,7 @@ class Game
       self.board.turn_count.even? ? player_1 : player_2
   end
 
+  def won?
+      if self.board.
+
 end
