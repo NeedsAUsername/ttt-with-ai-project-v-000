@@ -46,6 +46,7 @@ class Game
           end
       end
       self.board.update(move, self.current_player)
+      self.board.display
   end
 
   def play
@@ -58,5 +59,5 @@ class Game
           puts "Congratulations #{self.winner}!"
       end
   end
-  
+
 end
