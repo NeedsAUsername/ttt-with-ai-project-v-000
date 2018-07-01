@@ -11,9 +11,9 @@ module Players
         def move(board)
             move = nil
             # move = rand(1..9).to_s
-            if self.winning_move?(board)
+            if self.winning_move?(board) != nil
                 move = self.winning_move?(board)
-            elsif self.blocking_move?(board)
+            elsif self.blocking_move?(board) != nil
                 move = self.blocking_move?(board)
             else move = rand(1..9).to_s
             end
