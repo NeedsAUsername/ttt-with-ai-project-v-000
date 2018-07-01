@@ -38,8 +38,10 @@ class Game
   end
 
   def turn(input)
-      self.current_player.move(self.board)
-      
+      move = "invalid"
+      while move == "invalid"
+          input = self.current_player.move(self.board)
+          if self.board.valid_move?()
 
   end
 
