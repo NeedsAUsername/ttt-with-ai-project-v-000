@@ -31,7 +31,7 @@ module Players
                    winning_move = c[1]
                elsif board.cells[c[0]] == " " && board.cells[c[1]] == @token && board.cells[c[2]] == @token
                    winning_move = c[0]
-               end 
+               end
             end
             winning_move
         end
@@ -51,5 +51,6 @@ module Players
         #      blocking_move
         #      end
         # end
+    end 
 
 end
