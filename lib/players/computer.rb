@@ -20,11 +20,11 @@ module Players
         def winning_move?(board)
             winning_move = nil
             WIN_COMBINATIONS.each do |c|
-               if board.cells[c[0]] == self.opponent && board.cells[c[1]] == self.opponent && board.cells[c[2]] == " "
+               if board.cells[c[0]] == self.token && board.cells[c[1]] == self.token && board.cells[c[2]] == " "
                    winning_move = c[2]
-               elsif board.cells[c[0]] == self.opponent && board.cells[c[1]] == " " && board.cells[c[2]] == self.opponent
+               elsif board.cells[c[0]] == self.token && board.cells[c[1]] == " " && board.cells[c[2]] == self.token
                    winning_move = c[1]
-               elsif board.cells[c[0]] == " " && board.cells[c[1]] == self.opponent && board.cells[c[2]] == self.opponent
+               elsif board.cells[c[0]] == " " && board.cells[c[1]] == self.token && board.cells[c[2]] == self.token
                    winning_move = c[0]
             end
             winning_move
