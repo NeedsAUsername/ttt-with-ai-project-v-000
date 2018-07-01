@@ -28,7 +28,7 @@ module Players
         end
 
         def opponent
-            self.opponent == "X" ? "O" : "X"
+            @token == "X" ? "O" : "X"
         end
 
         def blocking_move?
