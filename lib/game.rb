@@ -34,9 +34,10 @@ class Game
   end
 
   def winner
-      if self.won?
-          self.board.cells[self.won?[0]]
-      end
+      self.board.cells[self.won?[0]] if self.won?
   end
+
+  def turn
+  end 
 
 end
