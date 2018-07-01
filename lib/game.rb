@@ -49,14 +49,16 @@ class Game
   end
 
   def play
-      while !self.won?
-          self.turn
-      end
       if self.draw?
           "Cat's Game!"
       elsif self.won?
           puts "Congratulations #{self.winner}!"
-      end 
+      else
+          self.turn
+      end
+      while !self.over? 
+          self.play
+      end
   end
 
 end
