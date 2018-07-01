@@ -54,7 +54,8 @@ module Players
         end
 
         def remaining_moves(board)
-            board.cells.detect {|cell| cell != " "}
+            board.cells.find_index {|cell| cell != " "}
+        end 
 
     end
 
