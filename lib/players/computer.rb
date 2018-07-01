@@ -3,7 +3,7 @@ module Players
         def move(board)
             valid_moves = []
             board.cells.each_with_index do |cell, index|
-                if board.taken?(cell)
+                if !board.taken?(cell)
                     valid_moves << index + 1
                 end
             end
