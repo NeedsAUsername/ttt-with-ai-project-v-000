@@ -14,6 +14,8 @@ class Game
       @board = board
   end
 
-
+  def current_player
+      self.board.
+  end
 
 end
