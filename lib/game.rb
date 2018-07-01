@@ -38,6 +38,10 @@ class Game
   end
 
   def turn
-  end 
+      move = "invalid"
+      while move == "invalid"
+          input = gets.strip
+          if self.board.valid_move?
+  end
 
 end
