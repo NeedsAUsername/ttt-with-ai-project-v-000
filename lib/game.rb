@@ -26,7 +26,7 @@ class Game
   end
 
   def draw?
-      self.board.full? && !self.won
-  end 
+      self.board.full? && !self.won?
+  end
 
 end
