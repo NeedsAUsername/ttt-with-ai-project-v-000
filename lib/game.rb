@@ -48,4 +48,7 @@ class Game
       self.board.update(move, self.current_player)
   end
 
+  def play
+  end 
+
 end
