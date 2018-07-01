@@ -40,9 +40,12 @@ class Game
   def turn(input)
       move = "invalid"
       while move == "invalid"
-          input = self.current_player.move(self.board)
+          input = self.current_player.move(self.board).to_i
           if self.board.valid_move?(input)
-
+              move = input
+          end
+      end
+      self.board.update(move, self.current_player)
   end
 
 end
