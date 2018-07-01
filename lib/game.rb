@@ -45,7 +45,7 @@ class Game
               move = input
           end
       end
-      self.board.update(move, )
+      self.board.update(move, current_player)
   end
 
 end
