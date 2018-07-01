@@ -16,5 +16,5 @@ elsif input = "1"
         Game.new(Players::Computer.new("X"), Players::Human.new("O"))
     end
 elsif input = "2"
-    puts "If you are going first, "
+     Game.new
 end
