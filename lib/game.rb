@@ -31,5 +31,6 @@ class Game
 
   def over?
       self.won? || self.draw?
+  end
 
 end
