@@ -15,6 +15,6 @@ elsif input = "1"
     elsif input == "n"
         Game.new(Players::Computer.new("X"), Players::Human.new("O"))
     end
-elsif input = "2"
+elsif input == "2"
      Game.new
 end
