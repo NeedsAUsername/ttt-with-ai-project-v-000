@@ -37,8 +37,9 @@ class Game
       self.board.cells[self.won?[0]] if self.won?
   end
 
-  def turn
-      userinput = gets
+  def turn(input)
+      self.board.update(self, self.current_player)
+
   end
 
 end
