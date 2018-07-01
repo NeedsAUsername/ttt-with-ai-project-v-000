@@ -58,5 +58,5 @@ class Game
           puts "Congratulations #{self.winner}!"
       end
   end
-
+  
 end
