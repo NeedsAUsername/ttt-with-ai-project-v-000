@@ -9,10 +9,10 @@ module Players
               ]
 
            # make winning move
-           
 
-           WIN_COMBINATIONS.each do |combination|
-               if board.
+
+           WIN_COMBINATIONS.each do |c|
+               if board.cells[c[0]] == @token 
         end
     end
 end
