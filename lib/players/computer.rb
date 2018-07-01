@@ -51,8 +51,8 @@ module Players
                 end
              end
              blocking_move
-             end
         end
+
     end
 
 end
