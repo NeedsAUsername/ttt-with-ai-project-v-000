@@ -39,6 +39,7 @@ class Game
 
   def turn(input)
       self.current_player.move(self.board)
+      
 
   end
 
