@@ -36,6 +36,7 @@ class Game
   def winner
       if self.won?
           self.board.cells[self.won[0]]
-      end 
+      end
+  end 
 
 end
