@@ -49,8 +49,10 @@ class Game
   end
 
   def play
-      self.turn
-      
+      while !self.won
+          self.turn
+      end 
+
   end
 
 end
