@@ -38,7 +38,7 @@ class Game
   end
 
   def turn(input)
-      self.board.update(self, self.current_player)
+      self.current_player.
 
   end
 
