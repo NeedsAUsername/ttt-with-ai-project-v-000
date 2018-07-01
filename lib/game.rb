@@ -38,6 +38,7 @@ class Game
   end
 
   def turn
+      input = gets.strip
   end
 
 end
