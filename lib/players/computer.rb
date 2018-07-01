@@ -14,6 +14,10 @@ module Players
             winning_move? || blocking_move? || rand(1..9).to_s
         end
 
+        def opponent
+            @token == "X" ? "O" : "X"
+        end
+
         def winning_move?
             winning_move = nil
             WIN_COMBINATIONS.each do |c|
@@ -27,9 +31,6 @@ module Players
             winning_move
         end
 
-        def opponent
-            @token == "X" ? "O" : "X"
-        end
 
         def blocking_move?
             blocking_move = nil
