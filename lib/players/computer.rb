@@ -13,6 +13,8 @@ module Players
             # move = rand(1..9).to_s
             if self.winning_move?(board)
                 move = self.winning_move?(board)
+            elsif self.blocking_move?(board)
+                move = self.blocking_move?(board)
             else move = rand(1..9).to_s
             end
             move
@@ -37,20 +39,20 @@ module Players
         end
 
 
-        # def blocking_move?(board)
-        #     blocking_move = nil
-        #     WIN_COMBINATIONS.each do |c|
-        #         if board.cells[c[0]] == self.opponent && board.cells[c[1]] == self.opponent && board.cells[c[2]] == " "
-        #             winning_move = c[2]
-        #         elsif board.cells[c[0]] == self.opponent && board.cells[c[1]] == " " && board.cells[c[2]] == self.opponent
-        #             winning_move = c[1]
-        #         elsif board.cells[c[0]] == " " && board.cells[c[1]] == self.opponent && board.cells[c[2]] == self.opponent
-        #             winning_move = c[0]
-        #         end
-        #      end
-        #      blocking_move
-        #      end
-        # end
-    end 
+        def blocking_move?(board)
+            blocking_move = nil
+            WIN_COMBINATIONS.each do |c|
+                if board.cells[c[0]] == self.opponent && board.cells[c[1]] == self.opponent && board.cells[c[2]] == " "
+                    winning_move = c[2]
+                elsif board.cells[c[0]] == self.opponent && board.cells[c[1]] == " " && board.cells[c[2]] == self.opponent
+                    winning_move = c[1]
+                elsif board.cells[c[0]] == " " && board.cells[c[1]] == self.opponent && board.cells[c[2]] == self.opponent
+                    winning_move = c[0]
+                end
+             end
+             blocking_move
+             end
+        end
+    end
 
 end
