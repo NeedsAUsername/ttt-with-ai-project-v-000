@@ -22,6 +22,7 @@ class Game
       WIN_COMBINATIONS.detect do |combination|
       combination.all? {|number| self.board.cells[number] == "X"} ||
       combination.all? {|number| self.board.cells[number] == "O"}
+    end 
   end
 
 end
