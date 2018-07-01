@@ -14,4 +14,7 @@ class Game
       @board = board
   end
 
+  def board
+      @bo
+
 end
