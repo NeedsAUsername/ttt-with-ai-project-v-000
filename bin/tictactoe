@@ -9,5 +9,12 @@ if input == "0"
     Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
 elsif input = "1"
     puts "Do you want to go first and be X? y/n"
+    answer = gets.strip
     if input == "y"
-        Game.new(Players::Human.new("X"), Players::)
+        Game.new(Players::Human.new("X"), Players::Computer.new("O"))
+    elsif input == "n"
+        Game.new(Players::Computer.new("X"), Players::Human.new("O"))
+    end
+elsif input = "2"
+    puts "If you are going first, "
+end
