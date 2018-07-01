@@ -1,4 +1,7 @@
 class Game
 
 
-end 
+    WIN_COMBINATIONS = 
+
+
+end
