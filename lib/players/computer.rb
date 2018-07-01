@@ -11,7 +11,7 @@ module Players
         def move(board)
             @board = board
             # move = rand(1..9).to_s
-            winning_move? || blocking_move? || rand(1..9).to_s
+            self.winning_move? || self.blocking_move? || rand(1..9).to_s
         end
 
         def opponent
