@@ -4,10 +4,10 @@ module Players
             valid_moves = []
             board.cells.each_with_index do |cell, index|
                 if !board.taken?(cell)
-                    valid_moves << index + 1
+                    valid_moves << (index + 1).to_s
                 end
             end
-            valid_moves.to_s
+            valid_moves
         end
     end
 
