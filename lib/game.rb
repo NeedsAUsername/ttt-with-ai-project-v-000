@@ -40,8 +40,12 @@ class Game
   def turn
       move = "invalid"
       while move == "invalid"
-          input = gets.strip
-          if self.board.valid_move?
+          input = gets.strip.to_i
+          if self.board.valid_move?(input)
+              move = input
+          end
+      end
+      self.board.update(move, )
   end
 
 end
