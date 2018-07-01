@@ -50,6 +50,7 @@ class Game
   end
 
   def play
+      self.board.display
       while !self.over?
           self.turn
       end
