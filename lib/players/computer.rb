@@ -8,7 +8,7 @@ module Players
                     valid = random
                 end
             end
-            random
+            valid
         end
     end
 
