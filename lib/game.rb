@@ -26,6 +26,6 @@ class Game
   end
 
   def draw?
-      
+      self.board.
 
 end
